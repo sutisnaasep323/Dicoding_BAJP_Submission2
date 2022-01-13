@@ -1,26 +1,29 @@
 package com.example.mymovies.ui.detail
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
-import com.example.mymovies.data.FilmEntity
+import com.example.mymovies.data.MovieAppRepository
+import com.example.mymovies.data.source.local.MovieEntity
+import com.example.mymovies.data.source.local.TvShowEntity
 import com.example.mymovies.utils.DataDummy
 
-class DetailViewModel : ViewModel() {
-    private lateinit var id: String
+class DetailViewModel(private val movieAppRepository: MovieAppRepository) : ViewModel() {
 
-    fun setSelectedID(id: String) {
-        this.id = id
+    private lateinit var movieId: String
+    private lateinit var tvShowId: String
+
+    fun selectedMovieId(movieId: String) {
+        this.movieId = movieId
     }
 
-    fun getDetail(): FilmEntity {
-        lateinit var movie: FilmEntity
-        val entityList = ArrayList<FilmEntity>()
-        entityList.addAll(DataDummy.getMovies())
-        entityList.addAll(DataDummy.getTvShows())
-        for (movieEntities in entityList) {
-            if (movieEntities.id == id) {
-                movie = movieEntities
-            }
-        }
-        return movie
+    fun selectedTvShowId(tvShowId: String) {
+        this.tvShowId = tvShowId
     }
+
+    fun getMovieDetail(): LiveData<MovieEntity> =
+        movieAppRepository.getMovieById(movieId)
+
+    fun getTvShowDetail(): LiveData<TvShowEntity> =
+        movieAppRepository.getTvShowById(tvShowId)
+
 }

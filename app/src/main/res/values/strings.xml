@@ -11,8 +11,10 @@
     <string name="release_date">Release Date:</string>
     <string name="dummySinopsis">Data sinopsis</string>
     <string name="genre">Genre:</string>
+    <string name="popularity">Popularity:</string>
+    <string name="language">Language:</string>
     <string name="duration">Duration:</string>
-    <string name="sinopsis">Sinopsis:</string>
+    <string name="sinopsis">Overview:</string>
     <string name="backButton">backbutton</string>
     <string name="image_description">image description</string>
 </resources>

@@ -10,7 +10,6 @@
     android:clickable="true"
     android:elevation="4dp"
     android:focusable="true"
-    android:foreground="?attr/tabSelectedTextColor"
     app:cardCornerRadius="20dp"
     app:cardMaxElevation="4dp">
 
@@ -31,6 +30,12 @@
             android:layout_height="match_parent"
             android:contentDescription="@string/foregroundPoster"
             android:src="@drawable/card_foreground" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -60,18 +65,18 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:contentDescription="@string/image_description"
-                android:src="@drawable/ic_duration"
+                android:src="@drawable/ic_language"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/duration"
+                android:id="@+id/language"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
                 android:layout_marginTop="4dp"
                 android:fontFamily="@font/poppins"
-                android:text="@string/dummyDuration"
+                android:text="@string/language"
                 android:textColor="@color/white"
                 android:textSize="18sp"
                 android:textStyle="bold"
@@ -81,14 +86,14 @@
 
 
             <TextView
-                android:id="@+id/genre"
+                android:id="@+id/popularity"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
                 android:fontFamily="@font/poppins"
                 android:gravity="center"
                 android:maxLines="1"
-                android:text="@string/dummyGenre"
+                android:text="@string/popularity"
                 android:textColor="@color/yellow"
                 android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="@+id/title"

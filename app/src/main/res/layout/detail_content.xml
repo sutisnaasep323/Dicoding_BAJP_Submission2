@@ -71,27 +71,27 @@
         app:riv_corner_radius="20dp" />
 
     <TextView
-        android:id="@+id/genre"
+        android:id="@+id/popularity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="18dp"
         android:fontFamily="@font/poppins_semibold"
-        android:text="@string/genre"
+        android:text="@string/popularity"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/score_detail" />
 
     <TextView
-        android:id="@+id/genre_detail"
+        android:id="@+id/popularity_detail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins"
         android:maxLines="1"
         android:text="@string/dummyGenre"
         android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="@id/genre"
-        app:layout_constraintTop_toBottomOf="@id/genre"
+        app:layout_constraintStart_toStartOf="@id/popularity"
+        app:layout_constraintTop_toBottomOf="@id/popularity"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
@@ -102,8 +102,8 @@
         android:fontFamily="@font/poppins_semibold"
         android:text="@string/release_date"
         android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="@+id/genre_detail"
-        app:layout_constraintTop_toBottomOf="@id/genre_detail" />
+        app:layout_constraintStart_toStartOf="@+id/popularity_detail"
+        app:layout_constraintTop_toBottomOf="@id/popularity_detail" />
 
     <TextView
         android:id="@+id/date"
@@ -117,26 +117,26 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/duration"
+        android:id="@+id/language"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/poppins_semibold"
-        android:text="@string/duration"
+        android:text="@string/language"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="@+id/date"
         app:layout_constraintTop_toBottomOf="@id/date" />
 
     <TextView
-        android:id="@+id/duration_detail"
+        android:id="@+id/language_detail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins"
         android:maxLines="1"
-        android:text="@string/dummyDuration"
+        android:text="@string/language"
         android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="@+id/duration"
-        app:layout_constraintTop_toBottomOf="@id/duration"
+        app:layout_constraintStart_toStartOf="@+id/language"
+        app:layout_constraintTop_toBottomOf="@id/language"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
@@ -147,8 +147,8 @@
         android:fontFamily="@font/poppins_semibold"
         android:text="@string/sinopsis"
         android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="@+id/duration_detail"
-        app:layout_constraintTop_toBottomOf="@id/duration_detail" />
+        app:layout_constraintStart_toStartOf="@+id/language_detail"
+        app:layout_constraintTop_toBottomOf="@id/language_detail" />
 
     <TextView
         android:id="@+id/sinopis_detail"

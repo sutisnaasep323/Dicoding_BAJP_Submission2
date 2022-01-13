@@ -8,37 +8,47 @@ import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.mymovies.databinding.FragmentTvShowsBinding
+import com.example.mymovies.viewmodel.ViewModelFactory
 
 
 class TvShowsFragment : Fragment() {
 
-    private lateinit var fragmentTvShowsBinding: FragmentTvShowsBinding
+    private var _fragmentTvShowsBinding: FragmentTvShowsBinding? = null
+    private val fragmentTvShowsBinding get() = _fragmentTvShowsBinding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        fragmentTvShowsBinding = FragmentTvShowsBinding.inflate(layoutInflater, container, false)
+        _fragmentTvShowsBinding = FragmentTvShowsBinding.inflate(layoutInflater, container, false)
         return fragmentTvShowsBinding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         if (activity != null) {
-            val viewModel = ViewModelProvider(
-                this,
-                ViewModelProvider.NewInstanceFactory()
-            )[TvShowsViewModel::class.java]
+            val factory = ViewModelFactory . getInstance ()
+            val viewModel = ViewModelProvider(this, factory)[TvShowsViewModel::class.java]
 
-            val tvShows = viewModel.getTvShows()
-            val academyAdapter = TvShowsAdapter()
-            academyAdapter.setTvShows(tvShows)
+            val tvShowsAdapter = TvShowsAdapter()
+
+            fragmentTvShowsBinding.progressBar.visibility = View.VISIBLE
+            viewModel.getTvShows().observe(viewLifecycleOwner, { movies ->
+                fragmentTvShowsBinding.progressBar.visibility = View.GONE
+                tvShowsAdapter.setTvShows(movies)
+                tvShowsAdapter.notifyDataSetChanged()
+            })
 
             with(fragmentTvShowsBinding.rvTvShows) {
                 layoutManager = LinearLayoutManager(context)
                 setHasFixedSize(true)
-                adapter = academyAdapter
+                adapter = tvShowsAdapter
             }
         }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _fragmentTvShowsBinding = null
     }
 }
