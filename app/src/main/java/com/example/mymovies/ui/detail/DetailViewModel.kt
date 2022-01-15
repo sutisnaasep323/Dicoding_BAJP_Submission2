@@ -5,7 +5,6 @@ import androidx.lifecycle.ViewModel
 import com.example.mymovies.data.MovieAppRepository
 import com.example.mymovies.data.source.local.MovieEntity
 import com.example.mymovies.data.source.local.TvShowEntity
-import com.example.mymovies.utils.DataDummy
 
 class DetailViewModel(private val movieAppRepository: MovieAppRepository) : ViewModel() {
 

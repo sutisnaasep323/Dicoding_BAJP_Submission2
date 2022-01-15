@@ -6,13 +6,11 @@ import android.view.View
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
-import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.request.RequestOptions
 import com.example.mymovies.R
 import com.example.mymovies.data.source.local.MovieEntity
 import com.example.mymovies.data.source.local.TvShowEntity
 import com.example.mymovies.databinding.ActivityDetailMoviesBinding
-import com.example.mymovies.databinding.DetailContentBinding
 import com.example.mymovies.viewmodel.ViewModelFactory
 
 class DetailMoviesActivity : AppCompatActivity() {
@@ -25,7 +23,6 @@ class DetailMoviesActivity : AppCompatActivity() {
 
         setContentView(detailMoviesBinding.root)
 
-//        detailMoviesBinding.detailContent.backButton.setOnClickListener { onBackPressed() }
         detailMoviesBinding.backButton.setOnClickListener { onBackPressed() }
 
         window.statusBarColor = ContextCompat.getColor(this, R.color.purple_700)

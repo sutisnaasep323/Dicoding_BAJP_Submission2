@@ -8,6 +8,5 @@ data class TvShowEntity(
     val voteAverage: Double,
     val name: String,
     val id: Int,
-    val voteCount: Int,
     val posterPath: String,
 )

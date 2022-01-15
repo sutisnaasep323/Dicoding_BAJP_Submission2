@@ -1,6 +1,5 @@
 package com.example.mymovies.api
 
-import com.example.mymovies.BuildConfig
 import com.example.mymovies.data.source.remote.response.MoviesResponse
 import com.example.mymovies.data.source.remote.response.TvShowsResponse
 import retrofit2.Call
@@ -11,12 +10,11 @@ interface ApiService {
 
     @GET("movie/popular")
     fun getMovies(
-        @Query("api_key") apiKey: String = "Your KEY"
+        @Query("api_key") apiKey: String = "KEY"
     ): Call<MoviesResponse>
 
     @GET("tv/popular")
     fun getTvShows(
-        @Query("api_key") apiKey: String = "Your KEY"
+        @Query("api_key") apiKey: String = "KEY"
     ): Call<TvShowsResponse>
-
 }

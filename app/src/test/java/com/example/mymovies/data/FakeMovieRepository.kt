@@ -1,25 +1,24 @@
 package com.example.mymovies.data
 
+import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.example.mymovies.data.source.remote.RemoteDataSource
 import com.example.mymovies.data.source.local.MovieEntity
 import com.example.mymovies.data.source.local.TvShowEntity
+import com.example.mymovies.data.source.remote.RemoteDataSource
 import com.example.mymovies.data.source.remote.response.Movie
 import com.example.mymovies.data.source.remote.response.TvShow
+import com.example.mymovies.utils.DataDummy
+import com.example.mymovies.utils.LiveDataTestUtil
+import com.nhaarman.mockitokotlin2.any
+import com.nhaarman.mockitokotlin2.doAnswer
+import com.nhaarman.mockitokotlin2.verify
+import org.junit.Assert.*
+import org.junit.Rule
+import org.junit.Test
+import org.mockito.Mockito
 
-class MovieAppRepository private constructor(private val remoteDataSource: RemoteDataSource) :
-    MovieAppDataSource {
-
-    companion object {
-        @Volatile
-        private var instance: MovieAppRepository? = null
-
-        fun getInstance(remoteData: RemoteDataSource): MovieAppRepository =
-            instance ?: synchronized(this) {
-                instance ?: MovieAppRepository(remoteData)
-            }
-    }
+class FakeMovieRepository (private val remoteDataSource: RemoteDataSource): MovieAppDataSource {
 
     override fun getAllMovies(): LiveData<List<MovieEntity>> {
         val movieResults = MutableLiveData<List<MovieEntity>>()
@@ -96,7 +95,7 @@ class MovieAppRepository private constructor(private val remoteDataSource: Remot
                                     voteAverage,
                                     id,
                                     title,
-                                    posterPath,
+                                    posterPath
                                 )
                             }
                     }

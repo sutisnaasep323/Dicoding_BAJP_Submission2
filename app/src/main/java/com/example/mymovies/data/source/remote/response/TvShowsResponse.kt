@@ -31,9 +31,6 @@ data class TvShow(
     @field:SerializedName("id")
     val id: Int,
 
-    @field:SerializedName("vote_count")
-    val voteCount: Int,
-
     @field:SerializedName("poster_path")
     val posterPath: String,
 

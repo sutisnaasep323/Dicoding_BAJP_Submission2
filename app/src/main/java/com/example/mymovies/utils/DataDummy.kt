@@ -1,6 +1,5 @@
 package com.example.mymovies.utils
 
-import com.example.mymovies.R
 import com.example.mymovies.data.source.local.MovieEntity
 import com.example.mymovies.data.source.local.TvShowEntity
 import com.example.mymovies.data.source.remote.response.Movie
@@ -17,10 +16,8 @@ object DataDummy {
                 7.8,
                 568124,
                 "Encanto",
-                2549,
                 "/3G1Q5xF40HkUBJXxt2DQgQzKTp5.jpg",
-
-            ),
+                ),
             MovieEntity(
                 "Peter Parker is unmasked and no longer able to separate his normal life from the high-stakes of being a super-hero. When he asks for help from Doctor Strange the stakes become even more dangerous, forcing him to discover what it truly means to be Spider-Man.",
                 "en",
@@ -29,7 +26,6 @@ object DataDummy {
                 8.4,
                 634649,
                 "Spider-Man: No Way Home",
-                3955,
                 "/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg"
             ),
             MovieEntity(
@@ -40,7 +36,6 @@ object DataDummy {
                 7.2,
                 425909,
                 "Ghostbusters: Afterlife",
-                732,
                 "/sg4xJaufDiQl7caFEskBtQXfD4x.jpg"
             )
         )
@@ -57,7 +52,6 @@ object DataDummy {
                 8.1,
                 "Cobra Kai",
                 77169,
-                4010,
                 "/6POBWybSBDBKjSs1VAQcnQC1qyt.jpg"
             )
         )
@@ -70,7 +64,6 @@ object DataDummy {
                 8.3,
                 "The Book of Boba Fett",
                 115036,
-                336,
                 "/gNbdjDi1HamTCrfvM9JeA94bNi2.jpg"
             )
         )
@@ -83,7 +76,6 @@ object DataDummy {
                 8.4,
                 "Euphoria",
                 85552,
-                5170,
                 "/jtnfNzqZwN4E32FGGxx1YZaBWWf.jpg"
             )
         )
@@ -101,10 +93,8 @@ object DataDummy {
                 7.8,
                 568124,
                 "Encanto",
-                2549,
                 "/3G1Q5xF40HkUBJXxt2DQgQzKTp5.jpg"
-
-                )
+            )
         )
         movies.add(
             Movie(
@@ -115,7 +105,6 @@ object DataDummy {
                 8.4,
                 634649,
                 "Spider-Man: No Way Home",
-                3955,
                 "/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg"
             )
         )
@@ -128,7 +117,6 @@ object DataDummy {
                 7.2,
                 425909,
                 "Ghostbusters: Afterlife",
-                732,
                 "/sg4xJaufDiQl7caFEskBtQXfD4x.jpg"
             )
         )
@@ -146,7 +134,6 @@ object DataDummy {
                 8.1,
                 "Cobra Kai",
                 77169,
-                4010,
                 "/6POBWybSBDBKjSs1VAQcnQC1qyt.jpg"
             )
         )
@@ -159,7 +146,6 @@ object DataDummy {
                 8.3,
                 "The Book of Boba Fett",
                 115036,
-                336,
                 "/gNbdjDi1HamTCrfvM9JeA94bNi2.jpg"
             )
         )
@@ -172,7 +158,6 @@ object DataDummy {
                 8.4,
                 "Euphoria",
                 85552,
-                5170,
                 "/jtnfNzqZwN4E32FGGxx1YZaBWWf.jpg"
             )
         )

@@ -10,10 +10,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.DataSource
 import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.request.RequestListener
-import com.bumptech.glide.request.RequestOptions
 import com.bumptech.glide.request.target.Target
-import com.example.mymovies.R
-import com.example.mymovies.data.source.local.MovieEntity
 import com.example.mymovies.data.source.local.TvShowEntity
 import com.example.mymovies.databinding.ItemsListBinding
 import com.example.mymovies.ui.detail.DetailMoviesActivity

@@ -31,9 +31,6 @@ data class Movie(
     @field:SerializedName("title")
     val title: String,
 
-    @field:SerializedName("vote_count")
-    val voteCount: Int,
-
     @field:SerializedName("poster_path")
     val posterPath: String
 )
