@@ -32,7 +32,10 @@
         <entry key="..\:/Study Android/BAJP/MyMovies_Submission2/app/src/main/res/drawable/ic_icon_foreground.xml" value="0.22552083333333334" />
         <entry key="..\:/Study Android/BAJP/MyMovies_Submission2/app/src/main/res/drawable/ic_language.xml" value="0.22552083333333334" />
         <entry key="..\:/Study Android/BAJP/MyMovies_Submission2/app/src/main/res/drawable/layout_bg.xml" value="0.22552083333333334" />
-        <entry key="..\:/Study Android/BAJP/MyMovies_Submission2/app/src/main/res/layout/activity_detail_movies.xml" value="0.1" />
+        <entry key="..\:/Study Android/BAJP/MyMovies_Submission2/app/src/main/res/font/poppins_bold.xml" value="0.23958333333333334" />
+        <entry key="..\:/Study Android/BAJP/MyMovies_Submission2/app/src/main/res/layout/activity_detail_movies.xml" value="0.22" />
+        <entry key="..\:/Study Android/BAJP/MyMovies_Submission2/app/src/main/res/layout/activity_home.xml" value="0.20615384615384616" />
+        <entry key="..\:/Study Android/BAJP/MyMovies_Submission2/app/src/main/res/layout/activity_splash_screen.xml" value="0.209375" />
         <entry key="..\:/Study Android/BAJP/MyMovies_Submission2/app/src/main/res/layout/detail_content.xml" value="0.20615384615384616" />
         <entry key="..\:/Study Android/BAJP/MyMovies_Submission2/app/src/main/res/layout/fragment_movies.xml" value="0.209375" />
         <entry key="..\:/Study Android/BAJP/MyMovies_Submission2/app/src/main/res/layout/fragment_tv_shows.xml" value="0.20615384615384616" />
